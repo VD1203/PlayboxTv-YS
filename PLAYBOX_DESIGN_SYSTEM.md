@@ -236,6 +236,22 @@ Contrast ratios were calculated against the tokens (glass surfaces blended over 
 - Focus order follows visual order. Visible focus indicators (2px Coral Red `#FF3F42` or white ring, ≥3:1) for keyboard and switch control.
 - Errors (forms, OTP, payments): icon + text, never colour only; Error colour text on dark is OK (5.0:1).
 
+### 8.7 Checklist
+
+| # | Check | Detail in |
+|---|---|---|
+| 1 | **Text contrast:** text is at least 4.5:1 against its background (3:1 for large text) | 8.1 |
+| 2 | **UI contrast:** buttons, progress bars and other meaningful shapes are at least 3:1 against their surroundings | 8.2 |
+| 3 | **Not colour alone:** selected, active and error states are also shown by shape, weight, underline or an icon | 8.2, 8.6 |
+| 4 | **Text on images:** text on posters, heroes or glass over images has a dark scrim; badges on posters have their own backing | 8.3 |
+| 5 | **Minimum text size:** readable text is at least 12; 10 only for decorative labels; no all-caps body text | 8.4 |
+| 6 | **Tap targets:** every tappable element has a touch area of at least 44×44 (48 on Android); pressed states keep that area; 8 px between targets | 8.5 |
+| 7 | **Accessible names:** icon-only buttons and logos have spoken labels; a poster card is announced as one item | 8.6 |
+| 8 | **Reduced motion:** animations calm down or stop when Reduce Motion is on | 8.6 |
+| 9 | **Carousels:** auto-advancing carousels can be paused and stop when touched; nothing flashes more than 3 times a second | 8.6 |
+| 10 | **Focus:** focus order follows the visual order, with a visible focus outline | 8.6 |
+| 11 | **Rails:** horizontal rails can be reached without precise swiping, with a "View All" alternative | 8.6 |
+
 ---
 
 ## 9. Rules for generating new PlayBox designs
@@ -248,4 +264,4 @@ Contrast ratios were calculated against the tokens (glass surfaces blended over 
 6. Glass surfaces = white 10–20% + `Glass_2`.
 7. Headings in SemiExpanded SemiBold; body in Zalando Sans; secondary text `#D6D6D7`, tertiary `#BCBDBD`.
 8. Icons from `Final Icons`; line = default, fill = active.
-9. **Run the section 8 checks on every screen** (contrast, scrims on imagery, 44px targets, non-colour state cues, accessible names, reduced motion). Where a house-style token fails, swap it for the accessible alternative listed there and note the change.
+9. **Run the checklist in 8.7 on every screen.** Where a house-style token fails, swap it for the accessible alternative listed in section 8 and note the change.
