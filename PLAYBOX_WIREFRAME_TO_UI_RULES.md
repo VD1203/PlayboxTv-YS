@@ -77,12 +77,13 @@ Visual reference: [PLAYBOX_DESIGN_SYSTEM.md](PLAYBOX_DESIGN_SYSTEM.md).
 - Auto layout on every frame that has children. No manual x/y positioning inside layouts.
 - Sizing set deliberately: Fill for full-width sections and text blocks, Hug for labels and buttons, Fixed only where a size is intended.
 - Gaps and padding bound to spacing variables.
+- **Space between (Auto gap) and a gap variable never go on the same frame.** Figma's panel treats them as exclusive, and the plugin API does not stop you setting both. When someone selects such a frame, Figma keeps the variable, switches alignment to top/left and collapses the layout. On every Space between frame, unbind the gap (`setBoundVariable('itemSpacing', null)`) and leave it unbound. Padding stays bound.
 - Horizontal rails are auto layout rows that can scroll or overflow, not loose cards.
 
 ### 6.4 Binding
 - Fills, strokes and text colors are bound to color variables.
 - Text uses text styles.
-- Corner radius, gap and padding are bound to spacing variables.
+- Corner radius, gap and padding are bound to spacing variables. The one exception is the gap on a Space between frame, which stays unbound (see 6.3).
 - Effects use effect styles.
 
 ### 6.5 Components
