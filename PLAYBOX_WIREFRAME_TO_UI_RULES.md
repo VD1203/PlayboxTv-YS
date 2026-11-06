@@ -100,11 +100,7 @@ Visual reference: [PLAYBOX_DESIGN_SYSTEM.md](PLAYBOX_DESIGN_SYSTEM.md).
 
 Generated designs must meet **WCAG 2.2 AA**. Details in section 8 of [PLAYBOX_DESIGN_SYSTEM.md](PLAYBOX_DESIGN_SYSTEM.md).
 
-- Text contrast ≥ 4.5:1 (≥ 3:1 for large text); UI and state contrast ≥ 3:1.
-- Text on imagery or glass gets a scrim.
-- Minimum readable text 12px.
-- Touch targets ≥ 44×44 (hit area, even if the visual is smaller).
-- Selected and active states are never shown by colour alone.
+- Run the checklist in section 8.7 of [PLAYBOX_DESIGN_SYSTEM.md](PLAYBOX_DESIGN_SYSTEM.md).
 - Where a design-system token fails accessibility, use the accessible alternative and note the change.
 - Accessibility issues in **existing** designs are flagged only when the user asks.
 

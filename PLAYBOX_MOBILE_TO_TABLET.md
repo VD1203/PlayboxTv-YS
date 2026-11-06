@@ -22,6 +22,8 @@ Height grows with the content (as on mobile). The width is fixed at 834.
 ## 2. Process
 
 1. **Read the mobile screen's structure first:** its sections, their order and why each exists. The tablet version keeps the same priority and section order; only the layout changes.
+   - **No guesswork.** Read every block down to its last layer: boolean operation type, every fill and whether it is visible, every effect and whether it is visible, radius, constraints, layout mode and sizing, and component variant. Never infer a shape or style from positions or a screenshot alone. If a fact can't be confirmed from the file, ask before building.
+   - Every difference from the mobile source must be a deliberate tablet decision: one of the responsive behaviours in section 3, or a new tablet block (section 5). State it in the delivery notes. Anything else, such as a new effect, decoration or a different shape, is proposed to the user first, not built.
 2. **Give every element one responsive behaviour** (section 3).
 3. **Build at 834**, then check at 768 and 1024 by resizing the frame (section 7).
 4. **Deliver** the tablet frame next to its mobile source.
@@ -110,7 +112,7 @@ Show more items per row. Card size is open: cards may grow, or stay the mobile s
 ### 4.9 What stays the same
 - Section order and content priority, all copy, CTA labels and branding.
 - The red interaction colour, focus/selected states and the dark theme.
-- All accessibility rules in section 8 of the design system: contrast, touch targets of at least 44×44, minimum text size 12, and no state shown by colour alone.
+- The checklist in section 8.7 of [PLAYBOX_DESIGN_SYSTEM.md](PLAYBOX_DESIGN_SYSTEM.md). Also check that text enlarged to 200% still fits the tablet layouts.
 
 ---
 
@@ -143,5 +145,7 @@ Show more items per row. Card size is open: cards may grow, or stay the mobile s
 1. Live screenshot at **834**.
 2. Resize the frame to **768** and **1024**. Nothing overlaps, text doesn't clip, and grids reflow instead of stretching.
 3. The section order matches the mobile source.
-4. Accessibility rules are met (contrast, 44px targets, text ≥ 12).
-5. List anything flagged: raw values, upscaled images, elements that needed a new block.
+4. Run the design system's 8.7 checklist, plus check that text enlarged to 200% still fits the tablet layouts.
+5. **Metadata check, to the last layer:** compare each tablet block with its mobile source layer by layer (structure, boolean type, paints, effects and their visibility, bindings). Any difference must be an intended tablet change.
+6. **Image check, how it looks:** screenshot each block on mobile and tablet side by side at the same scale. Compare shape, colour, depth, shadows, glows and cut-outs, not just the measurements. Do this for every bespoke block (hero, OTT dial, banners, sheets and dialogs), not only the full screen.
+7. List anything flagged: raw values, upscaled images, elements that needed a new block, and anything that couldn't be verified.
